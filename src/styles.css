@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --main-color:#0aad0a;
+}
+.bg-main{
+    background-color: var(--main-color)!important
+}
+.text-main{
+    color: #0aad0a;
+}
+.bg-susse{
+    color: yellow!important;
+  
+}

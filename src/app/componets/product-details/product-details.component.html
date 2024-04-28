@@ -1,0 +1,22 @@
+<div *ngIf="  !isLoading"><app-loader></app-loader></div>
+<div class="row gy-2 gx-5 align-items-center">
+<div class="col-md-3">
+    <img [src]="ProductS?.imageCover" class="w-100">
+   
+</div>
+<div class="col-md-8 ">
+    <div>
+        <h1> {{ProductS?.title}}</h1>
+        <p>{{ProductS?.description}}</p>
+    </div>
+    <p>{{ProductS?.category.name}}</p>
+    <div class="d-flex  justify-content-between" >
+     
+        <p><span>Price:</span>  {{ProductS?.price}}</p>
+        <p><span> {{ProductS?.ratingsAverage}}</span> <i  class='fa-solid fa-star bg-susse'></i></p>
+      </div>
+      <button class='btn   text-light '(click)="addTocart(ProductS._id)"><i class='fa-solid fa-cart-shopping text-main fa-2x'> </i></button>
+
+  
+</div>
+</div>

@@ -1,0 +1,36 @@
+ <div *ngIf="  !isLoading"><app-loader></app-loader></div>
+
+    <div class="row gy-2">
+  <div class="col-md-12">
+    <input type="text"[(ngModel)]="term"  class="form-control w-50 mx-auto" placeholder="search by title ........">
+  </div>
+        <div class="col-md-3 position-relative " #product *ngFor="let Product of ProductS|search:term">
+       
+            <div class="card p-5 ">
+                <a [routerLink]="['/productDetails',Product._id]" class="nav-link">
+                <div class="card-img">
+                    <img src={{Product.imageCover}} class="w-100">
+                </div>
+                <p class="card-title">
+                    {{Product.category.name}}
+                </p>
+                <h6 class="'card-desc'">{{Product.title.split(" ").splice(0,2).join(" ")|uppercase}}</h6></a> 
+                <div class="d-flex justify-content-between">
+    <p>{{Product.price|currency:'EUR'}}</p>
+    <button class='w-100 btn border-none border-0 text-light ' (click)="addTocart(Product._id)" >
+        <i class='fa-solid fa-cart-shopping text-main fa-2x'> </i></button></div>
+    <div class="   position-absolute  top-0 left-0 start-0">
+        <p *ngIf="Product.ratingsAverage>4 " class="bg-main">{{Product.ratingsAverage}} <i class="fa-solid fa-star rating-color bg-susse"></i></p>
+       <p *ngIf="Product.ratingsAverage<4 " class="bg-danger">{{Product.ratingsAverage}} <i class="fa-solid fa-star rating-color bg-susse"></i></p>
+    </div>
+                </div> 
+
+
+               
+            
+            
+          
+           
+    </div>
+    
+    </div>
