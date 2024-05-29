@@ -55,7 +55,7 @@
                         <label for="phone" class="form-label">phone: </label>
                         <input type="tel" class="form-control mb-2" formControlName="phone" id="phone"  >
                         <div class="" *ngIf="RegisterForm.get('phone')?.errors &&RegisterForm.get('phone')?.touched ">
-                            <p *ngIf="RegisterForm.get('phone')?.getError('pattern')"class='text-danger'> phone must start 01</p>
+                            <p *ngIf="RegisterForm.get('phone')?.getError('pattern')"class='text-danger'> Enter a number starting with 01 ,for example <sub>01(0215)00000000 </sub> </p>
                             <p *ngIf="RegisterForm.get('phone')?.getError('required')"class='text-danger'> phone is required</p>
                         </div>
                     </div>
