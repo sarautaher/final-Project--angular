@@ -34,7 +34,7 @@
                         <input type="password" class="form-control mb-2" formControlName="password" id=" password"  >
                         <div class="" *ngIf="RegisterForm.get('password')?.errors &&RegisterForm.get('password')?.touched ">
                       
-                            <p *ngIf="RegisterForm.get('password')?.getError('pattern')"class='text-danger'>password is matchess</p>
+                            <p *ngIf="RegisterForm.get('password')?.getError('pattern')"class='text-danger'>Enter password,for example<sub>Sa12356</sub></p>
                             <p *ngIf="RegisterForm.get('password')?.getError('required')"class='text-danger'> password is required</p>
                 
                         </div>
